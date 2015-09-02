@@ -23,9 +23,9 @@ public class MainClass {
 
             Map data= new HashMap();
 
-            data.put(CaseCodes.STATUS_ID,new Integer(CaseCodes.PASSED_STATUS_CODE));
+            data.put(CaseCodes.STATUS_ID,CaseCodes.PASSED_STATUS_CODE);
 
-            data.put(CaseCodes.COMMENT,"This is weird!!!");
+            data.put(CaseCodes.COMMENT,"This is a comment!!!");
 
             System.out.println(api.add_result_for_case(data, help));
 
