@@ -14,6 +14,10 @@ public class CaseCodes {
 
     public static  final int FAILED_STATUS_CODE=5;
 
+    public static final int GET_CASE_TYPE=1;
+
+    public static final int ADD_RESULTS_TYPE=2;
+
     /*
         The ID of the user who created the test case
      */
