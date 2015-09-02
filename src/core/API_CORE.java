@@ -1,9 +1,12 @@
 package core;
 
 
+import core.test_rail_case.Case_Helper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import testrail.APIClient;
+import java.util.Map;
+
 
 /**
  * Created by Santiago on 02/09/2015.
@@ -56,6 +59,17 @@ public class API_CORE {
     }
 
 
+    private JSONObject send_post(Map data,Case_Helper caze) throws Exception{
+
+        return (JSONObject) this.client.sendPost(caze.buildCase(),data);
+    }
+
+
+
+    public JSONObject add_result_for_case(Map data,Case_Helper caze) throws Exception {
+        caze.type(2);
+        return this.send_post(data,caze);
+    }
 
 
 
