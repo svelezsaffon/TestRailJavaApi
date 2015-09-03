@@ -23,7 +23,7 @@ public class API_CORE {
         this.is_init=false;
     }
 
-    public void init() throws Exception{
+    public void connect() throws Exception{
 
         this.client= new APIClient(TestRailConfig.TEST_RAIL_URL);
         this.client.setUser(TestRailConfig.TEST_RAIL_USERNAME);
@@ -32,6 +32,17 @@ public class API_CORE {
         this.is_init=true;
     }
 
+    public void set_url(String url){
+        TestRailConfig.TEST_RAIL_URL=url;
+    }
+
+    public void set_password(String password){
+        TestRailConfig.TEST_RAIL_PASSWORD=password;
+    }
+
+    public void set_username(String username){
+        TestRailConfig.TEST_RAIL_USERNAME=username;
+    }
 
     public JSONObject get_case(String test_case_id) throws Exception{
         if(this.is_init){
