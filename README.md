@@ -23,7 +23,9 @@ After cloning there will be two special things, all the code or the uilt JAR. Fo
 4)In your test-suite custom properties, add 3 new properties. This are the ones used to login to the TestRail server.
 
 Username == The username used to login to the test rail server.
+
 password == The Password used to login to the test rail server.
+
 URL      == URL of the TestRail Server.
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
