@@ -9,7 +9,7 @@ INSTRUCTIONS ON HOW TO USE IT:
 
 There are several ways to use this API, this project can easily integrate with SoapUI Selenium Web driver.
 
-# Here are the instructions SOAP UI
+## Here are the instructions SOAP UI
 
 1) Clone the code:
 git clone https://github.com/svelezsaffon/TestRailJavaApi.git
@@ -26,6 +26,6 @@ Username == The username used to login to the test rail server.
 password == The Password used to login to the test rail server.
 URL      == URL of the TestRail Server.
 
-
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 
