@@ -28,6 +28,6 @@ Username == The username used to login to the test rail server.
 password == The Password used to login to the test rail server.
 URL      == URL of the TestRail Server.
 
-5) On your test case, create a new Script Case Step... Left click over the test case
+5) On your test case, create a new Script Case Step... Left click over the test case -> add step -> Groovy Script
 
-![alt tag](https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing)
+https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing
