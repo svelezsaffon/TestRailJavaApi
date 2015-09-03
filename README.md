@@ -57,13 +57,20 @@ api.set_password(password);
 api.set_url(url);
 api.set_username(username);
 
+
+//The function connect makes that the library creates the connection with the Test-Rail Server. This function must be called, if not all other methods will throw an Exception
 api.connect();
 
-def assertionsList = testRunner.getTestCase().getTestStepByName("GoogleMapsRequest").getAssertionList();
+//Get the assertions from the previous Request Step.
+def assertionsList = testRunner.getTestCase().getTestStepByName("[REQUEST STEP NAME]").getAssertionList();
 
 boolean result=true;
 
 String failed_message="";
+
+/*
+The following loop checks the status of each assertion
+*/
 
 for( e in assertionsList){
     def status=e.status.toString();
