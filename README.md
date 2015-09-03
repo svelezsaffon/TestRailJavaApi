@@ -30,6 +30,7 @@ URL      == URL of the TestRail Server.
 
 5) On your test case, create a new Script Case Step... Left click over the test case -> add step -> Groovy Script
 
+###### Image with steps
 https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing
 
 6) The following code is one of the many scripts you can create. This one specially, checks the Assertions in a previous Rest Request, if one of the request fails, then the Library will report to Test Rail a Failed Test Result with the approapiate error message.
