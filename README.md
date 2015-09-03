@@ -28,3 +28,6 @@ Username == The username used to login to the test rail server.
 password == The Password used to login to the test rail server.
 URL      == URL of the TestRail Server.
 
+5) On your test case, create a new Script Case Step... Left click over the test case
+
+![alt text](C:\Users\Santiago\Documents\TestRailJavaApi\Images\scriptstep.png "Logo Title Text 1")
