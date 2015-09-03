@@ -28,7 +28,6 @@ public class API_CORE {
         this.client= new APIClient(TestRailConfig.TEST_RAIL_URL);
         this.client.setUser(TestRailConfig.TEST_RAIL_USERNAME);
         this.client.setPassword(TestRailConfig.TEST_RAIL_PASSWORD);
-
         this.is_init=true;
     }
 

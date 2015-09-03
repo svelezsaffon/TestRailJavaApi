@@ -6,7 +6,7 @@ package core.test_rail_case;
 public class CaseCodes {
 
 
-    public static  final int RETEST_STATUS_CODE=3;
+    public static  final int RETEST_STATUS_CODE=4;
 
     public static  final int PASSED_STATUS_CODE=1;
 
