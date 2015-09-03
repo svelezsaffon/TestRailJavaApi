@@ -32,7 +32,7 @@ URL      == URL of the TestRail Server.
 
 https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing
 
-6) The following code is one of the many scripts you can create.
+6) The following code is one of the many scripts you can create. This one specially, checks the Assertions in a previous Rest Request, if one of the request fails, then the Library will report to Test Rail a Failed Test Result with the approapiate error message.
 
 ```groovy
 
@@ -43,17 +43,18 @@ import core.test_rail_case.CaseCodes;
 import core.test_rail_case.Case_Helper;
 
 //Extract the previous created properties from the TestSuite Custom Variables
+
 def username = testRunner.testCase.testSuite.getPropertyValue( "Username" );
 def password = testRunner.testCase.testSuite.getPropertyValue( "Password" );
 def url = testRunner.testCase.testSuite.getPropertyValue( "Url" )
 
 //Create a API_CORE variable that will help you to interact with the library
+
 API_CORE api=new API_CORE();
 
+//Inser the login variables into the library
 api.set_password(password);
-
 api.set_url(url);
-
 api.set_username(username);
 
 api.connect();
