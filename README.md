@@ -27,5 +27,3 @@ password == The Password used to login to the test rail server.
 URL      == URL of the TestRail Server.
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-
