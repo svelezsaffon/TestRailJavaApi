@@ -71,5 +71,7 @@ public class CaseCodes {
 
     public static final String  COMMENT="comment";
 
+    public static final String  DEFFECTS="defects";
+
 
 }

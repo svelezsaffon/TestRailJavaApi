@@ -1,5 +1,7 @@
 package core.test_rail_case;
 
+import java.util.ArrayList;
+
 /**
  * Created by Santiago on 02/09/2015.
  */
@@ -21,16 +23,15 @@ public class Case_Helper {
     private String section_id="";
     private boolean section_id_set=false;
 
+    private ArrayList deffects;
+
     private int type=1;
 
     public Case_Helper(){
-
+        this.deffects=new ArrayList();
     }
 
     public String buildCase() throws Exception{
-
-
-
 
 
 
@@ -73,13 +74,16 @@ public class Case_Helper {
 
 
 
-                case_request.append("/");
+
 
                 if(!this.case_id_set){
                     throw new Exception("Case id is required");
                 }
 
+                case_request.append("/");
                 case_request.append(this.case_id);
+
+
 
 
                 break;
@@ -94,6 +98,21 @@ public class Case_Helper {
 
         return case_request.toString();
     }
+
+
+    public Case_Helper add_deffect(String deffect){
+        this.deffects.add(deffect);
+        return this;
+    }
+
+    public boolean has_deffects(){
+        return this.deffects.size()>0;
+    }
+
+    public ArrayList get_deffects(){
+        return this.deffects;
+    }
+
 
 
     public Case_Helper type(int type){

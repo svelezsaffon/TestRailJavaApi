@@ -1,10 +1,13 @@
 package core;
 
 
+import core.test_rail_case.CaseCodes;
 import core.test_rail_case.Case_Helper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import testrail.APIClient;
+
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -78,6 +81,22 @@ public class API_CORE {
 
     public JSONObject add_result_for_case(Map data,Case_Helper caze) throws Exception {
         caze.type(2);
+
+        if(caze.has_deffects()){
+            StringBuilder deffects=new StringBuilder();
+            ArrayList def=caze.get_deffects();
+            for(int i=0;i<def.size();i++){
+                if(i!=0){
+                    deffects.append(",");
+                }
+                deffects.append(def.get(i));
+            }
+
+            data.put(CaseCodes.DEFFECTS,deffects.toString());
+        }
+
+
+
         return this.send_post(data,caze);
     }
 
