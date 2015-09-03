@@ -30,4 +30,4 @@ URL      == URL of the TestRail Server.
 
 5) On your test case, create a new Script Case Step... Left click over the test case
 
-![alt text](https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing "Logo Title Text 1")
+![alt tag](https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing)
