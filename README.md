@@ -36,33 +36,47 @@ https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing
 
 ```groovy
 
-//Import the added jar
+/*
+Import the added jar
+*/
 
 import core.*;
 import core.test_rail_case.CaseCodes;
 import core.test_rail_case.Case_Helper;
 
-//Extract the previous created properties from the TestSuite Custom Variables
+/*
+Extract the previous created properties from the TestSuite Custom Variables
+*/
 
 def username = testRunner.testCase.testSuite.getPropertyValue( "Username" );
 def password = testRunner.testCase.testSuite.getPropertyValue( "Password" );
 def url = testRunner.testCase.testSuite.getPropertyValue( "Url" )
 
-//Create a API_CORE variable that will help you to interact with the library
+/*
+Create a API_CORE variable that will help you to interact with the library
+*/
 
 API_CORE api=new API_CORE();
 
-//Inser the login variables into the library
+/*
+Inser the login variables into the library
+*/
+
 api.set_password(password);
 api.set_url(url);
 api.set_username(username);
 
 
-//The function connect makes that the library creates the connection with the Test-Rail Server. This function must be called, if not all other methods will throw an Exception
+/*
+The function connect makes that the library creates the connection with the Test-Rail Server. This function must be called, if not all other methods will throw an Exception
+*/
+
 api.connect();
 
-//Get the assertions from the previous Request Step.
+/*
+Get the assertions from the previous Request Step.
 def assertionsList = testRunner.getTestCase().getTestStepByName("[REQUEST STEP NAME]").getAssertionList();
+*/
 
 boolean result=true;
 
