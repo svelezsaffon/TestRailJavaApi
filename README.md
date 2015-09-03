@@ -11,7 +11,7 @@ There are several ways to use this API, this project can easily integrate with S
 
 ---
 
-## Here are the instructions SOAP UI
+### Here are the instructions SOAP UI
 
 1) Clone the code:
 git clone https://github.com/svelezsaffon/TestRailJavaApi.git
