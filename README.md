@@ -31,3 +31,72 @@ URL      == URL of the TestRail Server.
 5) On your test case, create a new Script Case Step... Left click over the test case -> add step -> Groovy Script
 
 https://drive.google.com/file/d/0B6LQ_Fb9bryrdkpLQjdJcHF0LVk/view?usp=sharing
+
+6) The following code is one of the many scripts you can create.
+
+```groovy
+
+import core.*;
+import core.test_rail_case.CaseCodes;
+import core.test_rail_case.Case_Helper;
+
+
+API_CORE api=new API_CORE();
+
+def username = testRunner.testCase.testSuite.getPropertyValue( "Username" );
+def password = testRunner.testCase.testSuite.getPropertyValue( "Password" );
+def url = testRunner.testCase.testSuite.getPropertyValue( "Url" )
+
+api.set_password(password);
+
+api.set_url(url);
+
+api.set_username(username);
+
+api.connect();
+
+def assertionsList = testRunner.getTestCase().getTestStepByName("GoogleMapsRequest").getAssertionList();
+
+boolean result=true;
+
+String failed_message="";
+
+for( e in assertionsList){
+    def status=e.status.toString();
+
+    if(status=="FAILED"){
+
+ 		result &=false;
+
+		def errors=e.getErrors();
+
+		if(errors!=null){
+			failed_message+="["+e.getName()+"]:="+errors[0].getMessage()+"\n";
+		}
+
+    }else if(status=="VALID"){
+
+	result &=true;
+
+    }
+}
+
+
+Case_Helper help= new Case_Helper().run_id("4").type(CaseCodes.ADD_RESULTS_TYPE).case_id("3");
+Map data=new HashMap();
+
+if(result==false){
+	data.put(CaseCodes.STATUS_ID,CaseCodes.FAILED_STATUS_CODE);
+	data.put(CaseCodes.COMMENT,failed_message);
+}else{
+	data.put(CaseCodes.STATUS_ID,CaseCodes.PASSED_STATUS_CODE);
+	data.put(CaseCodes.COMMENT,"This test case passed correctly");
+}
+
+
+api.add_result_for_case(data,help);
+
+log.info("Report has been succesfully sent to TestRail Server");
+
+
+```
