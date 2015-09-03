@@ -2,7 +2,7 @@
 
 This API is a wrapper arround TestRail Java Appi. This will help to automated your Test Results management when using test rail.
 
-This project contains all the files nececsary dependencies to start working with it.
+This project contains all the  necessary dependencies to start working with it.
 
 
 INSTRUCTIONS ON HOW TO USE IT:
@@ -107,11 +107,18 @@ for( e in assertionsList){
     }
 }
 
-
+/*
+The Case_Helper class helps you to build all the requests to manage Test Cases. Check the CAse_Help Class on the source code
+*/
 Case_Helper help= new Case_Helper().run_id("4").type(CaseCodes.ADD_RESULTS_TYPE).case_id("3");
 Map data=new HashMap();
 
 if(result==false){
+
+    /*
+        Add the data you want to add to your test result.
+    */
+
 	data.put(CaseCodes.STATUS_ID,CaseCodes.FAILED_STATUS_CODE);
 	data.put(CaseCodes.COMMENT,failed_message);
 }else{
@@ -119,10 +126,12 @@ if(result==false){
 	data.put(CaseCodes.COMMENT,"This test case passed correctly");
 }
 
-
+/*
+Snd the results to the TestRail Server
+*/
 api.add_result_for_case(data,help);
 
-log.info("Report has been succesfully sent to TestRail Server");
+log.info("Report has been successfully sent to TestRail Server");
 
 
 ```
