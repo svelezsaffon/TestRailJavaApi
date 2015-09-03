@@ -9,7 +9,7 @@ INSTRUCTIONS ON HOW TO USE IT:
 
 There are several ways to use this API, this project can easily integrate with SoapUI Selenium Web driver.
 
-**Here are the instructions SOAP UI**
+# Here are the instructions SOAP UI
 
 1) Clone the code:
 git clone https://github.com/svelezsaffon/TestRailJavaApi.git
