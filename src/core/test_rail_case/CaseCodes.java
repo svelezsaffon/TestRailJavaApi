@@ -47,7 +47,7 @@ public class CaseCodes {
     /*
 
      */
-    public static final String  CASE_ID="id";
+    public static final String  ID="id";
 
     public static final String  MILESTONE_ID="milestone_id";
 
@@ -73,5 +73,11 @@ public class CaseCodes {
 
     public static final String  DEFFECTS="defects";
 
+    public static final String  CASE_ID="case_id";
 
+    public static final String  RUN_ID="run_id";
+
+/*
+{"milestone_id":null,"custom_expected":null,"custom_preconds":null,"estimate_forecast":null,"priority_id":4,"assignedto_id":1,"status_id":1,"estimate":null,"type_id":3,"id":12,"custom_steps":null,"title":"Map Markers","run_id":4,"refs":null,"case_id":4}
+ */
 }

@@ -100,9 +100,25 @@ public class API_CORE {
         return this.send_post(data,caze);
     }
 
+    public JSONObject get_run(int run_id) throws Exception{
+        StringBuilder uri=new StringBuilder("get_run/");
+        uri.append(run_id);
+        return (JSONObject) this.client.sendGet(uri.toString());
+    }
 
+    public JSONArray get_tests_in_run(int run_id) throws Exception{
+        StringBuilder uri=new StringBuilder("get_run/");
+        uri.append(run_id);
 
+        this.client.sendGet(uri.toString());
 
+        uri.setLength(0);
+
+        uri.append("get_tests/");
+        uri.append(run_id);
+
+        return (JSONArray) this.client.sendGet(uri.toString());
+    }
 
 
 
