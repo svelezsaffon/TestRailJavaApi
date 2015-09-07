@@ -76,8 +76,10 @@ api.connect();
 
 /*
 Get the assertions from the previous Request Step.
-def assertionsList = testRunner.getTestCase().getTestStepByName("[REQUEST STEP NAME]").getAssertionList();
 */
+
+def assertionsList = testRunner.getTestCase().getTestStepByName("[REQUEST STEP NAME]").getAssertionList();
+
 
 boolean result=true;
 
