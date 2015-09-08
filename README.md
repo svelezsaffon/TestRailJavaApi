@@ -5,6 +5,8 @@ This API is a wrapper arround TestRail Java Appi. This will help to automated yo
 This project contains all the  necessary dependencies to start working with it.
 
 
+The dependencies are being handled with Maven.
+
 INSTRUCTIONS ON HOW TO USE IT:
 
 There are several ways to use this API, this project can easily integrate with SoapUI Selenium Web driver.
