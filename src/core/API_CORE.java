@@ -1,11 +1,13 @@
 package core;
 
 
+
+
+import core.test_rail.APIClient;
 import core.test_rail_case.CaseCodes;
 import core.test_rail_case.Case_Helper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import testrail.APIClient;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -18,6 +20,8 @@ public class API_CORE {
 
 
     private APIClient client;
+
+
 
     private boolean is_init;
 
