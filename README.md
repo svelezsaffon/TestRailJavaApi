@@ -44,8 +44,8 @@ Import the added jar
 */
 
 import core.*;
-import core.test_rail_case.CaseCodes;
-import core.test_rail_case.Case_Helper;
+import core.test_rail_case.StaticCodes;
+
 
 /*
 Extract the previous created properties from the TestSuite Custom Variables

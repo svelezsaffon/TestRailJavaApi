@@ -1,16 +1,5 @@
-/**
- * TestRail API binding for Java (API v2, available since TestRail 3.0)
- *
- * Learn more:
- *
- * http://docs.gurock.com/testrail-api2/start
- * http://docs.gurock.com/testrail-api2/accessing
- *
- * Copyright Gurock Software GmbH. See license.md for details.
- */
- 
-package core.test_rail;
 
+package core.test_rail;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -22,6 +11,9 @@ import java.io.BufferedReader;
 import java.io.UnsupportedEncodingException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
+
+
+
 
 public class APIClient
 {
@@ -127,6 +119,8 @@ public class APIClient
 		
 		String auth = getAuthorization(this.m_user, this.m_password);
 		conn.addRequestProperty("Authorization", "Basic " + auth);
+
+
 		
 		if (method == "POST")
 		{
